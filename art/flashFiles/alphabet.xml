@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextureAtlas imagePath="alphabet.png">
+  <!--Created with Psych Engine Font Converter-->
+  <SubTexture name="% normal instance 10000" x="375" y="415" width="45" height="51" frameX="0" frameY="0" frameWidth="46" frameHeight="52" />
+  <SubTexture name="( normal instance 10000" x="340" y="355" width="22" height="56" frameX="-2" frameY="-1" frameWidth="26" frameHeight="57" />
+  <SubTexture name=") normal instance 10000" x="440" y="56" width="22" height="55" frameX="-2" frameY="0" frameWidth="26" frameHeight="55" />
+  <SubTexture name="; normal instance 10000" x="549" y="348" width="15" height="44" frameX="0" frameY="0" frameWidth="15" frameHeight="44" />
+  <SubTexture name="@ normal instance 10000" x="362" y="355" width="51" height="56" frameX="0" frameY="0" frameWidth="52" frameHeight="56" />
+  <SubTexture name="[ normal instance 10000" x="397" y="62" width="25" height="61" frameX="0" frameY="0" frameWidth="25" frameHeight="61" />
+  <SubTexture name="] normal instance 10000" x="368" y="194" width="25" height="62" frameX="0" frameY="0" frameWidth="25" frameHeight="63" />
+  <SubTexture name="^ normal instance 10000" x="39" y="558" width="32" height="27" frameX="0" frameY="0" frameWidth="32" frameHeight="27" />
+  <SubTexture name="_ normal instance 10000" x="158" y="140" width="53" height="13" frameX="0" frameY="0" frameWidth="53" frameHeight="13" />
+  <SubTexture name="~ normal instance 10000" x="519" y="444" width="43" height="21" frameX="0" frameY="0" frameWidth="43" frameHeight="21" />
+  <SubTexture name="+ normal instance 10000" x="43" y="517" width="42" height="39" frameX="0" frameY="0" frameWidth="42" frameHeight="39" />
+  <SubTexture name="= normal instance 10000" x="0" y="558" width="39" height="29" frameX="0" frameY="0" frameWidth="39" frameHeight="29" />
+  <SubTexture name="- normal instance 10000" x="211" y="138" width="36" height="12" frameX="0" frameY="0" frameWidth="37" frameHeight="13" />
+  <SubTexture name="0 normal instance 10000" x="413" y="355" width="27" height="44" frameX="-5" frameY="-8" frameWidth="35" frameHeight="54" />
+  <SubTexture name="1 normal instance 10000" x="397" y="306" width="27" height="47" frameX="-1" frameY="-5" frameWidth="30" frameHeight="53" />
+  <SubTexture name="2 normal instance 10000" x="260" y="470" width="31" height="46" frameX="-3" frameY="-5" frameWidth="37" frameHeight="52" />
+  <SubTexture name="3 normal instance 10000" x="519" y="348" width="30" height="48" frameX="-2" frameY="-5" frameWidth="34" frameHeight="56" />
+  <SubTexture name="4 normal instance 10000" x="291" y="470" width="29" height="46" frameX="-3" frameY="-4" frameWidth="35" frameHeight="55" />
+  <SubTexture name="5 normal instance 10000" x="0" y="470" width="30" height="47" frameX="-5" frameY="-3" frameWidth="41" frameHeight="53" />
+  <SubTexture name="6 normal instance 10000" x="30" y="470" width="29" height="47" frameX="-6" frameY="-3" frameWidth="39" frameHeight="54" />
+  <SubTexture name="7 normal instance 10000" x="519" y="396" width="30" height="48" frameX="-6" frameY="-1" frameWidth="40" frameHeight="49" />
+  <SubTexture name="8 normal instance 10000" x="478" y="51" width="34" height="48" frameX="0" frameY="-5" frameWidth="34" frameHeight="56" />
+  <SubTexture name="9 normal instance 10000" x="519" y="201" width="34" height="49" frameX="0" frameY="-5" frameWidth="34" frameHeight="57" />
+  <SubTexture name="a bold instance 10000" x="157" y="154" width="54" height="67" frameX="0" frameY="0" frameWidth="54" frameHeight="67" />
+  <SubTexture name="a uppercase instance 10000" x="43" y="355" width="45" height="59" frameX="0" frameY="0" frameWidth="45" frameHeight="59" />
+  <SubTexture name="a lowercase instance 10000" x="126" y="517" width="36" height="38" frameX="0" frameY="0" frameWidth="36" frameHeight="38" />
+  <SubTexture name="& normal instance 10000" x="175" y="355" width="36" height="58" frameX="0" frameY="0" frameWidth="36" frameHeight="58" />
+  <SubTexture name="angry faic normal instance 10000" x="130" y="415" width="53" height="54" frameX="0" frameY="0" frameWidth="54" frameHeight="54" />
+  <SubTexture name="apostrophe bold instance 10000" x="162" y="517" width="26" height="37" frameX="-1" frameY="0" frameWidth="28" frameHeight="37" />
+  <SubTexture name="apostrophe normal instance 10000" x="565" y="59" width="17" height="27" frameX="0" frameY="0" frameWidth="17" frameHeight="27" />
+  <SubTexture name="b bold instance 10000" x="81" y="79" width="46" height="70" frameX="0" frameY="0" frameWidth="46" frameHeight="70" />
+  <SubTexture name="b uppercase instance 10000" x="211" y="355" width="38" height="58" frameX="0" frameY="-1" frameWidth="38" frameHeight="59" />
+  <SubTexture name="b lowercase instance 10000" x="519" y="51" width="31" height="50" frameX="0" frameY="0" frameWidth="31" frameHeight="50" />
+  <SubTexture name="( bold instance 10000" x="0" y="79" width="37" height="75" frameX="0" frameY="0" frameWidth="104" frameHeight="81" />
+  <SubTexture name=") bold instance 10000" x="23" y="0" width="37" height="76" frameX="-33" frameY="0" frameWidth="70" frameHeight="77" />
+  <SubTexture name="+ bold instance 10000" x="59" y="470" width="50" height="47" frameX="0" frameY="0" frameWidth="50" frameHeight="47" />
+  <SubTexture name="- bold instance 10000" x="257" y="199" width="46" height="19" frameX="0" frameY="0" frameWidth="47" frameHeight="19" />
+  <SubTexture name="& bold instance 10000" x="211" y="0" width="46" height="69" frameX="0" frameY="0" frameWidth="47" frameHeight="70" />
+  <SubTexture name="* bold instance 10000" x="440" y="376" width="34" height="39" frameX="0" frameY="0" frameWidth="34" frameHeight="39" />
+  <SubTexture name="< bold instance 10000" x="60" y="0" width="49" height="76" frameX="0" frameY="0" frameWidth="49" frameHeight="76" />
+  <SubTexture name="&gt; bold instance 10000" x="109" y="0" width="49" height="76" frameX="0" frameY="0" frameWidth="49" frameHeight="76" />
+  <SubTexture name="0 bold instance 10000" x="309" y="65" width="43" height="64" frameX="-1" frameY="-1" frameWidth="45" frameHeight="65" />
+  <SubTexture name="1 bold instance 10000" x="309" y="129" width="41" height="64" frameX="0" frameY="0" frameWidth="41" frameHeight="64" />
+  <SubTexture name="2 bold instance 10000" x="292" y="290" width="46" height="62" frameX="0" frameY="0" frameWidth="47" frameHeight="63" />
+  <SubTexture name="3 bold instance 10000" x="397" y="123" width="41" height="61" frameX="0" frameY="-2" frameWidth="41" frameHeight="63" />
+  <SubTexture name="4 bold instance 10000" x="397" y="184" width="41" height="61" frameX="-1" frameY="0" frameWidth="42" frameHeight="62" />
+  <SubTexture name="5 bold instance 10000" x="0" y="355" width="43" height="60" frameX="-5" frameY="-2" frameWidth="52" frameHeight="64" />
+  <SubTexture name="6 bold instance 10000" x="338" y="290" width="42" height="62" frameX="-5" frameY="-1" frameWidth="50" frameHeight="66" />
+  <SubTexture name="7 bold instance 10000" x="397" y="0" width="43" height="62" frameX="-4" frameY="0" frameWidth="50" frameHeight="62" />
+  <SubTexture name="8 bold instance 10000" x="309" y="193" width="42" height="63" frameX="0" frameY="0" frameWidth="42" frameHeight="65" />
+  <SubTexture name="9 bold instance 10000" x="352" y="130" width="45" height="64" frameX="0" frameY="-1" frameWidth="45" frameHeight="66" />
+  <SubTexture name="c bold instance 10000" x="55" y="223" width="55" height="66" frameX="0" frameY="0" frameWidth="55" frameHeight="66" />
+  <SubTexture name="c uppercase instance 10000" x="295" y="355" width="45" height="57" frameX="0" frameY="0" frameWidth="45" frameHeight="57" />
+  <SubTexture name="c lowercase instance 10000" x="309" y="256" width="32" height="33" frameX="0" frameY="0" frameWidth="33" frameHeight="33" />
+  <SubTexture name="comma normal instance 10000" x="565" y="86" width="19" height="23" frameX="0" frameY="0" frameWidth="19" frameHeight="23" />
+  <SubTexture name="d bold instance 10000" x="257" y="67" width="51" height="66" frameX="-1" frameY="0" frameWidth="53" frameHeight="67" />
+  <SubTexture name="d uppercase instance 10000" x="0" y="415" width="48" height="55" frameX="0" frameY="-1" frameWidth="48" frameHeight="56" />
+  <SubTexture name="d lowercase instance 10000" x="440" y="111" width="32" height="53" frameX="0" frameY="0" frameWidth="32" frameHeight="53" />
+  <SubTexture name="$ normal instance 10000" x="96" y="290" width="40" height="63" frameX="0" frameY="0" frameWidth="40" frameHeight="64" />
+  <SubTexture name="back slash normal instance 10000" x="88" y="355" width="43" height="59" frameX="0" frameY="0" frameWidth="43" frameHeight="59" />
+  <SubTexture name="down arrow normal instance 10000" x="320" y="470" width="38" height="44" frameX="0" frameY="0" frameWidth="39" frameHeight="44" />
+  <SubTexture name="e bold instance 10000" x="309" y="0" width="43" height="65" frameX="0" frameY="-1" frameWidth="43" frameHeight="66" />
+  <SubTexture name="e uppercase instance 10000" x="264" y="415" width="34" height="52" frameX="0" frameY="0" frameWidth="34" frameHeight="53" />
+  <SubTexture name="e lowercase instance 10000" x="188" y="517" width="33" height="37" frameX="0" frameY="0" frameWidth="33" frameHeight="37" />
+  <SubTexture name="end quote bold instance 10000" x="109" y="470" width="38" height="47" frameX="0" frameY="0" frameWidth="38" frameHeight="47" />
+  <SubTexture name="end quote normal instance 10000" x="221" y="517" width="28" height="36" frameX="0" frameY="0" frameWidth="28" frameHeight="36" />
+  <SubTexture name="exclamation bold instance 10000" x="0" y="0" width="23" height="79" frameX="0" frameY="0" frameWidth="23" frameHeight="79" />
+  <SubTexture name="exclamation normal instance 10000" x="352" y="194" width="16" height="64" frameX="0" frameY="0" frameWidth="17" frameHeight="64" />
+  <SubTexture name="f bold instance 10000" x="211" y="154" width="43" height="67" frameX="0" frameY="0" frameWidth="43" frameHeight="67" />
+  <SubTexture name="f uppercase instance 10000" x="519" y="101" width="36" height="50" frameX="0" frameY="-1" frameWidth="36" frameHeight="51" />
+  <SubTexture name="f lowercase instance 10000" x="478" y="99" width="27" height="48" frameX="0" frameY="0" frameWidth="27" frameHeight="48" />
+  <SubTexture name="forward slash normal instance 10000" x="249" y="355" width="46" height="58" frameX="0" frameY="0" frameWidth="46" frameHeight="58" />
+  <SubTexture name="g bold instance 10000" x="158" y="0" width="53" height="70" frameX="0" frameY="0" frameWidth="54" frameHeight="70" />
+  <SubTexture name="g uppercase instance 10000" x="48" y="415" width="43" height="55" frameX="0" frameY="0" frameWidth="43" frameHeight="55" />
+  <SubTexture name="g lowercase instance 10000" x="532" y="470" width="33" height="41" frameX="0" frameY="0" frameWidth="33" frameHeight="41" />
+  <SubTexture name="h bold instance 10000" x="257" y="133" width="44" height="66" frameX="-1" frameY="0" frameWidth="45" frameHeight="66" />
+  <SubTexture name="h uppercase instance 10000" x="440" y="164" width="32" height="53" frameX="0" frameY="0" frameWidth="32" frameHeight="53" />
+  <SubTexture name="h lowercase instance 10000" x="478" y="147" width="29" height="48" frameX="0" frameY="0" frameWidth="29" frameHeight="48" />
+  <SubTexture name="# normal instance 10000" x="358" y="470" width="39" height="44" frameX="0" frameY="0" frameWidth="39" frameHeight="44" />
+  <SubTexture name="heart normal instance 10000" x="0" y="517" width="43" height="41" frameX="0" frameY="0" frameWidth="43" frameHeight="41" />
+  <SubTexture name="i bold instance 10000" x="136" y="290" width="42" height="63" frameX="-1" frameY="-1" frameWidth="43" frameHeight="64" />
+  <SubTexture name="i uppercase instance 10000" x="420" y="415" width="35" height="51" frameX="-1" frameY="0" frameWidth="36" frameHeight="52" />
+  <SubTexture name="i lowercase instance 10000" x="551" y="151" width="13" height="42" frameX="0" frameY="0" frameWidth="13" frameHeight="42" />
+  <SubTexture name="j bold instance 10000" x="0" y="154" width="53" height="69" frameX="-1" frameY="0" frameWidth="54" frameHeight="70" />
+  <SubTexture name="j uppercase instance 10000" x="440" y="217" width="38" height="53" frameX="0" frameY="0" frameWidth="39" frameHeight="54" />
+  <SubTexture name="j lowercase instance 10000" x="478" y="195" width="28" height="48" frameX="0" frameY="0" frameWidth="28" frameHeight="48" />
+  <SubTexture name="k bold instance 10000" x="211" y="69" width="44" height="69" frameX="0" frameY="0" frameWidth="44" frameHeight="69" />
+  <SubTexture name="k uppercase instance 10000" x="298" y="415" width="35" height="52" frameX="0" frameY="0" frameWidth="35" frameHeight="52" />
+  <SubTexture name="k lowercase instance 10000" x="478" y="243" width="35" height="48" frameX="0" frameY="0" frameWidth="35" frameHeight="48" />
+  <SubTexture name="l bold instance 10000" x="110" y="223" width="41" height="66" frameX="0" frameY="0" frameWidth="41" frameHeight="66" />
+  <SubTexture name="l uppercase instance 10000" x="440" y="270" width="34" height="53" frameX="0" frameY="0" frameWidth="34" frameHeight="53" />
+  <SubTexture name="l lowercase instance 10000" x="550" y="51" width="10" height="48" frameX="0" frameY="0" frameWidth="10" frameHeight="48" />
+  <SubTexture name="left arrow normal instance 10000" x="85" y="517" width="41" height="39" frameX="0" frameY="0" frameWidth="41" frameHeight="39" />
+  <SubTexture name="m bold instance 10000" x="178" y="290" width="56" height="63" frameX="0" frameY="0" frameWidth="56" frameHeight="63" />
+  <SubTexture name="m uppercase instance 10000" x="519" y="250" width="44" height="49" frameX="0" frameY="0" frameWidth="44" frameHeight="50" />
+  <SubTexture name="m lowercase instance 10000" x="71" y="558" width="41" height="27" frameX="0" frameY="0" frameWidth="41" frameHeight="27" />
+  <SubTexture name="multiply x normal instance 10000" x="352" y="258" width="34" height="32" frameX="0" frameY="0" frameWidth="34" frameHeight="32" />
+  <SubTexture name="n bold instance 10000" x="352" y="0" width="45" height="65" frameX="0" frameY="0" frameWidth="45" frameHeight="65" />
+  <SubTexture name="n uppercase instance 10000" x="519" y="151" width="32" height="50" frameX="0" frameY="0" frameWidth="32" frameHeight="50" />
+  <SubTexture name="n lowercase instance 10000" x="565" y="0" width="27" height="30" frameX="0" frameY="0" frameWidth="27" frameHeight="30" />
+  <SubTexture name="o bold instance 10000" x="53" y="154" width="50" height="69" frameX="0" frameY="0" frameWidth="50" frameHeight="69" />
+  <SubTexture name="o uppercase instance 10000" x="183" y="415" width="40" height="54" frameX="0" frameY="0" frameWidth="40" frameHeight="54" />
+  <SubTexture name="o lowercase instance 10000" x="353" y="517" width="30" height="32" frameX="0" frameY="0" frameWidth="30" frameHeight="32" />
+  <SubTexture name="p bold instance 10000" x="158" y="70" width="46" height="70" frameX="0" frameY="0" frameWidth="46" frameHeight="70" />
+  <SubTexture name="p uppercase instance 10000" x="519" y="299" width="35" height="49" frameX="0" frameY="0" frameWidth="35" frameHeight="51" />
+  <SubTexture name="p lowercase instance 10000" x="397" y="470" width="28" height="43" frameX="0" frameY="0" frameWidth="28" frameHeight="43" />
+  <SubTexture name="period bold instance 10000" x="565" y="109" width="17" height="17" frameX="0" frameY="0" frameWidth="17" frameHeight="17" />
+  <SubTexture name="period normal instance 10000" x="565" y="126" width="14" height="14" frameX="0" frameY="0" frameWidth="14" frameHeight="14" />
+  <SubTexture name="q bold instance 10000" x="257" y="0" width="52" height="67" frameX="0" frameY="0" frameWidth="52" frameHeight="67" />
+  <SubTexture name="q uppercase instance 10000" x="478" y="0" width="41" height="51" frameX="0" frameY="0" frameWidth="41" frameHeight="51" />
+  <SubTexture name="q lowercase instance 10000" x="425" y="470" width="36" height="43" frameX="0" frameY="0" frameWidth="36" frameHeight="43" />
+  <SubTexture name="question bold instance 10000" x="37" y="79" width="44" height="73" frameX="0" frameY="0" frameWidth="44" frameHeight="73" />
+  <SubTexture name="question normal instance 10000" x="352" y="65" width="39" height="65" frameX="0" frameY="0" frameWidth="39" frameHeight="65" />
+  <SubTexture name="r bold instance 10000" x="151" y="223" width="47" height="66" frameX="0" frameY="0" frameWidth="47" frameHeight="66" />
+  <SubTexture name="r uppercase instance 10000" x="91" y="415" width="39" height="55" frameX="0" frameY="0" frameWidth="40" frameHeight="55" />
+  <SubTexture name="r lowercase instance 10000" x="565" y="30" width="24" height="29" frameX="0" frameY="0" frameWidth="24" frameHeight="29" />
+  <SubTexture name="right arrow normal instance 10000" x="249" y="517" width="40" height="36" frameX="0" frameY="0" frameWidth="40" frameHeight="36" />
+  <SubTexture name="s bold instance 10000" x="198" y="223" width="49" height="66" frameX="0" frameY="0" frameWidth="49" frameHeight="66" />
+  <SubTexture name="s uppercase instance 10000" x="440" y="323" width="38" height="53" frameX="0" frameY="-1" frameWidth="38" frameHeight="55" />
+  <SubTexture name="s lowercase instance 10000" x="478" y="435" width="27" height="35" frameX="0" frameY="0" frameWidth="27" frameHeight="35" />
+  <SubTexture name="start quote bold instance 10000" x="147" y="470" width="38" height="47" frameX="0" frameY="0" frameWidth="38" frameHeight="47" />
+  <SubTexture name="start quote normal instance 10000" x="383" y="517" width="31" height="32" frameX="0" frameY="0" frameWidth="31" frameHeight="33" />
+  <SubTexture name="t bold instance 10000" x="52" y="290" width="44" height="64" frameX="0" frameY="0" frameWidth="44" frameHeight="64" />
+  <SubTexture name="t uppercase instance 10000" x="478" y="291" width="41" height="48" frameX="0" frameY="-1" frameWidth="42" frameHeight="50" />
+  <SubTexture name="t lowercase instance 10000" x="478" y="339" width="28" height="48" frameX="0" frameY="0" frameWidth="28" frameHeight="48" />
+  <SubTexture name="u bold instance 10000" x="131" y="355" width="44" height="59" frameX="0" frameY="0" frameWidth="44" frameHeight="59" />
+  <SubTexture name="u uppercase instance 10000" x="185" y="470" width="37" height="47" frameX="0" frameY="-1" frameWidth="38" frameHeight="49" />
+  <SubTexture name="u lowercase instance 10000" x="289" y="517" width="31" height="33" frameX="0" frameY="0" frameWidth="31" frameHeight="33" />
+  <SubTexture name="up arrow normal instance 10000" x="461" y="470" width="36" height="42" frameX="0" frameY="0" frameWidth="36" frameHeight="42" />
+  <SubTexture name="v bold instance 10000" x="247" y="223" width="54" height="66" frameX="0" frameY="0" frameWidth="54" frameHeight="66" />
+  <SubTexture name="v uppercase instance 10000" x="478" y="387" width="40" height="48" frameX="0" frameY="0" frameWidth="40" frameHeight="48" />
+  <SubTexture name="v lowercase instance 10000" x="414" y="517" width="32" height="31" frameX="0" frameY="0" frameWidth="32" frameHeight="31" />
+  <SubTexture name="w bold instance 10000" x="234" y="290" width="58" height="63" frameX="0" frameY="0" frameWidth="58" frameHeight="63" />
+  <SubTexture name="w uppercase instance 10000" x="519" y="0" width="46" height="51" frameX="0" frameY="0" frameWidth="46" frameHeight="51" />
+  <SubTexture name="w lowercase instance 10000" x="446" y="517" width="42" height="31" frameX="0" frameY="0" frameWidth="42" frameHeight="31" />
+  <SubTexture name="x bold instance 10000" x="0" y="223" width="55" height="67" frameX="0" frameY="0" frameWidth="55" frameHeight="67" />
+  <SubTexture name="x uppercase instance 10000" x="223" y="415" width="41" height="53" frameX="0" frameY="0" frameWidth="41" frameHeight="53" />
+  <SubTexture name="x lowercase instance 10000" x="320" y="517" width="33" height="33" frameX="0" frameY="0" frameWidth="33" frameHeight="33" />
+  <SubTexture name="y bold instance 10000" x="103" y="154" width="54" height="69" frameX="0" frameY="0" frameWidth="54" frameHeight="69" />
+  <SubTexture name="y uppercase instance 10000" x="333" y="415" width="42" height="52" frameX="0" frameY="0" frameWidth="42" frameHeight="52" />
+  <SubTexture name="y lowercase instance 10000" x="497" y="470" width="35" height="42" frameX="0" frameY="0" frameWidth="35" frameHeight="42" />
+  <SubTexture name="z bold instance 10000" x="0" y="290" width="52" height="65" frameX="0" frameY="0" frameWidth="52" frameHeight="65" />
+  <SubTexture name="z uppercase instance 10000" x="222" y="470" width="38" height="47" frameX="0" frameY="0" frameWidth="38" frameHeight="47" />
+  <SubTexture name="z lowercase instance 10000" x="488" y="517" width="38" height="31" frameX="0" frameY="0" frameWidth="38" frameHeight="31" />
+  <SubTexture name="| normal instance 10000" x="127" y="79" width="11" height="70" frameX="0" frameY="0" frameWidth="11" frameHeight="70" />
+  <SubTexture name="* normal instance 10000" x="526" y="517" width="26" height="31" frameX="0" frameY="0" frameWidth="27" frameHeight="31" />
+  <SubTexture name="< normal instance 10000" x="440" y="0" width="38" height="56" frameX="0" frameY="0" frameWidth="38" frameHeight="56" />
+  <SubTexture name="&gt; normal instance 10000" x="397" y="245" width="38" height="61" frameX="0" frameY="0" frameWidth="38" frameHeight="61" />
+  <SubTexture name=": normal instance 10000" x="549" y="396" width="14" height="40" frameX="0" frameY="0" frameWidth="14" frameHeight="40" />
+</TextureAtlas>
