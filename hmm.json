@@ -56,7 +56,7 @@
       "dir": "",
       "ref": "master",
       "url": "https://github.com/superpowers04/linc_luajit"
-    }
+    },
     {
       "name": "discord_rpc",
       "type": "git",
