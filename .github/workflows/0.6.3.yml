@@ -19,7 +19,7 @@ jobs:
   # This workflow contains a single job called "build"
   buildLinux:
     # The type of runner that the job will run on
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
@@ -34,10 +34,10 @@ jobs:
         run: |
           sudo apt-get install libvlc-dev
           sudo apt-get install libvlccore-dev
-          haxelib setup ~/haxelib
+          haxelib newrepo
           haxelib install lime 8.0.1 --quiet
           haxelib install openfl 9.2.1 --quiet
-          haxelib install flixel 5.3.1 --quiet
+          haxelib install flixel 5.2.2 --quiet
           haxelib install flixel-ui 2.5.0 --quiet
           haxelib install hscript 2.5.0 --quiet
           haxelib install flixel-tools 1.5.1 --quiet
@@ -47,27 +47,21 @@ jobs:
           haxelib install tjson 1.4.0 --quiet
           haxelib install hxjsonast 1.1.0 --quiet
           haxelib install hxcpp-debug-server 1.2.4 --quiet
-          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
-          haxelib git linc_luajit https://github.com/superpowers04/linc_luajit
-          haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
-          haxelib git faxe https://github.com/uhrobots/faxe
+          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc --quiet
+          haxelib git linc_luajit https://github.com/superpowers04/linc_luajit --quiet
+          haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit --quiet
+          haxelib git faxe https://github.com/uhrobots/faxe --quiet
           haxelib install hxCodec 2.5.1 --quiet
           haxelib set hxCodec 2.5.1
           haxelib set lime 8.0.1
           haxelib set openfl 9.2.1
-          haxelib set flixel 5.3.1
-          haxelib set flixel-ui 2.5.0
-          haxelib set hscript 2.5.0
-          haxelib set flixel-tools 1.5.1
-          haxelib set flixel-addons 3.0.2
           haxelib set hxcpp 4.2.1
-          haxelib set tjson 1.4.0
-          haxelib set hxjsonast 1.1.0
-          haxelib set hxcpp-debug-server 1.2.4
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
-        run: haxelib run lime build Project.xml linux --app-version="4.0.0-${{ github.run_id}}"
+        run: | 
+          haxelib fixrepo
+          haxelib run lime build Project.xml linux --app-version="4.0.0-${{ github.run_id}}"
       - name: Publish Artifact
         uses: actions/upload-artifact@v2.2.4
         with:
@@ -97,7 +91,7 @@ jobs:
       - name: Install Haxelib
         run: |
           haxelib newrepo
-          haxelib install lime 8.1.2 --quiet
+          haxelib install lime 8.0.1 --quiet
           haxelib install openfl 9.2.1 --quiet
           haxelib install flixel 5.2.2 --quiet
           haxelib install flixel-ui 2.5.0 --quiet
@@ -109,13 +103,13 @@ jobs:
           haxelib install tjson 1.4.0 --quiet
           haxelib install hxjsonast 1.1.0 --quiet
           haxelib install hxcpp-debug-server 1.2.4 --quiet
-          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc 
-          haxelib git linc_luajit https://github.com/superpowers04/linc_luajit
-          haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
-          haxelib git faxe https://github.com/uhrobots/faxe
+          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc --quiet
+          haxelib git linc_luajit https://github.com/superpowers04/linc_luajit --quiet
+          haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit --quiet
+          haxelib git faxe https://github.com/uhrobots/faxe --quiet
           haxelib install hxCodec 2.5.1 --quiet
           haxelib set hxCodec 2.5.1
-          haxelib set lime 8.1.2
+          haxelib set lime 8.0.1
           haxelib set openfl 9.2.1
           haxelib set hxcpp 4.2.1
         shell: cmd
@@ -139,7 +133,7 @@ jobs:
           restore-keys: |
             cache-build-windows
   buildMac:
-    runs-on: macos-latest
+    runs-on: macos-12
 
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
@@ -151,13 +145,10 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
-          sudo apt-get install libvlc-dev
-          sudo apt-get install libvlccore-dev
-          haxelib setup ~/haxelib
-          haxe -cp ./setup -D analyzer-optimize -main Main --interp
+          haxelib newrepo
           haxelib install lime 8.0.1 --quiet
           haxelib install openfl 9.2.1 --quiet
-          haxelib install flixel 5.3.1 --quiet
+          haxelib install flixel 5.2.2 --quiet
           haxelib install flixel-ui 2.5.0 --quiet
           haxelib install hscript 2.5.0 --quiet
           haxelib install flixel-tools 1.5.1 --quiet
@@ -167,23 +158,15 @@ jobs:
           haxelib install tjson 1.4.0 --quiet
           haxelib install hxjsonast 1.1.0 --quiet
           haxelib install hxcpp-debug-server 1.2.4 --quiet
-          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
-          haxelib git linc_luajit https://github.com/superpowers04/linc_luajit
-          haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
-          haxelib git faxe https://github.com/uhrobots/faxe
+          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc --quiet
+          haxelib git linc_luajit https://github.com/superpowers04/linc_luajit --quiet
+          haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit --quiet
+          haxelib git faxe https://github.com/uhrobots/faxe --quiet
           haxelib install hxCodec 2.5.1 --quiet
           haxelib set hxCodec 2.5.1
           haxelib set lime 8.0.1
           haxelib set openfl 9.2.1
-          haxelib set flixel 5.3.1
-          haxelib set flixel-ui 2.5.0
-          haxelib set hscript 2.5.0
-          haxelib set flixel-tools 1.5.1
-          haxelib set flixel-addons 3.0.2
           haxelib set hxcpp 4.2.1
-          haxelib set tjson 1.4.0
-          haxelib set hxjsonast 1.1.0
-          haxelib set hxcpp-debug-server 1.2.4
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
