@@ -103,7 +103,7 @@ jobs:
           haxelib install tjson 1.4.0 --quiet
           haxelib install hxjsonast 1.1.0 --quiet
           haxelib install hxcpp-debug-server 1.2.4 --quiet
-          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc
+          haxelib git discord_rpc https://github.com/Aidan63/linc_discord-rpc 
           haxelib git linc_luajit https://github.com/superpowers04/linc_luajit
           haxelib git hxvm-luajit https://github.com/nebulazorua/hxvm-luajit
           haxelib git faxe https://github.com/uhrobots/faxe
