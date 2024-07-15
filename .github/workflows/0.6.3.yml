@@ -29,6 +29,16 @@ jobs:
       - uses: krdlab/setup-haxe@master
         with:
           haxe-version: 4.2.5
+      - name: Restore Cache
+        uses: actions/cache@main
+        with:
+          key: cache-build-linux
+          path: |
+            .haxelib/
+            export/release/linux/haxe/
+            export/release/linux/obj/
+          restore-keys: |
+            cache-build-linux
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
@@ -49,6 +59,16 @@ jobs:
         with:
           name: linuxBuild
           path: 'export/release/linux/bin'
+      - name: Uploading new cache
+        uses: actions/cache@main
+        with:
+          key: cache-build-linux
+          path: |
+            .haxelib/
+            export/release/linux/haxe/
+            export/release/linux/obj/
+          restore-keys: |
+            cache-build-linux
   buildWindows:
     runs-on: windows-latest
 
@@ -107,6 +127,16 @@ jobs:
       - uses: krdlab/setup-haxe@master
         with:
           haxe-version: 4.2.5
+      - name: Restore Cache
+        uses: actions/cache@main
+        with:
+          key: cache-build-macos
+          path: |
+            .haxelib/
+            export/release/macos/haxe/
+            export/release/macos/obj/
+          restore-keys: |
+            cache-build-macos
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
@@ -125,3 +155,13 @@ jobs:
         with:
           name: macBuild
           path: export/release/macos/bin
+      - name: Uploading new cache
+        uses: actions/cache@main
+        with:
+          key: cache-build-macos
+          path: |
+            .haxelib/
+            export/release/macos/haxe/
+            export/release/macos/obj/
+          restore-keys: |
+            cache-build-macos
