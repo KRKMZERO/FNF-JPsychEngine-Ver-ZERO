@@ -23,14 +23,21 @@ class FlashingState extends MusicBeatState
 		var bg:FlxSprite = new FlxSprite().makeGraphic(FlxG.width, FlxG.height, FlxColor.BLACK);
 		add(bg);
 
+
 		warnText = new FlxText(0, 0, FlxG.width,
-			"Hey, watch out!\n
-			This Mod contains some flashing lights!\n
-			Press ENTER to disable them now or go to Options Menu.\n
-			Press ESCAPE to ignore this message.\n
-			You've been warned!",
-			32);
-		warnText.setFormat("VCR OSD Mono", 32, FlxColor.WHITE, CENTER);
+			"点滅ライトについてのご注意
+			Note on Flashing Lights
+			\n
+			このMODには点滅ライトが含まれてる可能性があります！
+			This mod may contain flashing lights!
+			\n
+			ENTERキーで無効にして進行します
+			Press ENTER key to disable and proceed
+			ESCAPEキーで有効のまま始めます
+			Start with ESCAPE key enabled
+			楽しんでね！  Enjoy!",
+			20);
+		warnText.setFormat("(Paths.font("vcr.ttf")", 20, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
 		add(warnText);
 	}
