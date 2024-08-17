@@ -129,7 +129,7 @@ class TitleState extends MusicBeatState
 		swagShader = new ColorSwap();
 		super.create();
 
-		FlxG.save.bind('controls_v2', 'JP_3.0.3-zero');
+		FlxG.save.bind('controls_v2', 'JPsychEngine');//JPsychEngine JP_3.0.3-zero
 
 		ClientPrefs.loadPrefs();
 
