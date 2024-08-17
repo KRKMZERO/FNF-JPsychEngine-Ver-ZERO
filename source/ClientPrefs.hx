@@ -136,7 +136,7 @@ class ClientPrefs {
 		FlxG.save.flush();
 
 		var save:FlxSave = new FlxSave();
-		save.bind('controls_v2', 'JP_3.0.3-zero'); //Placing this in a separate save so that it can be manually deleted without removing your Score and stuff
+		save.bind('controls_v2', 'JPsychEngine'); //Placing this in a separate save so that it can be manually deleted without removing your Score and stuff //JPsychEngine JP_3.0.3-zero
 		save.data.customControls = keyBinds;
 		save.flush();
 		FlxG.log.add("Settings saved!");
@@ -270,7 +270,7 @@ class ClientPrefs {
 			comboStacking = FlxG.save.data.comboStacking;
 
 		var save:FlxSave = new FlxSave();
-		save.bind('controls_v2', 'JP_3.0.3-zero');
+		save.bind('controls_v2', 'JPsychEngine');//JPsychEngine JP_3.0.3-zero
 		if(save != null && save.data.customControls != null) {
 			var loadedControls:Map<String, Array<FlxKey>> = save.data.customControls;
 			for (control => keys in loadedControls) {
