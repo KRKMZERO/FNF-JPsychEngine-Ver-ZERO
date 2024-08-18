@@ -16,6 +16,8 @@ class Setup {
 		if (!FileSystem.exists(".haxelib"))
 			FileSystem.createDirectory(".haxelib");
 
+		Sys.command('haxelib --global update haxelib');
+
 		// brief explanation: first we parse a json containing the library names, data, and such
 		final libs:Array<Library> = Json.parse(File.getContent('./hmm.json')).dependencies;
 
@@ -27,8 +29,8 @@ class Setup {
 					var version:String = data.version == null ? "" : data.version;
 					if (!FileSystem.exists(".haxelib/" + data.name) || (FileSystem.exists(".haxelib/" + data.name + "/.current") ? File.getContent(".haxelib/" + data.name + "/.current") != data.version : true))
 					{
-						trace('インストールされていません。インストール開始: haxelib --quiet install ${data.name} ${version}');
-						Sys.command('haxelib --quiet install ${data.name} ${version}');
+						trace('インストールされていません。インストール開始: haxelib install ${data.name} ${version}');
+						Sys.command('haxelib install ${data.name} ${version}');
 					}
         
 				case "git": // for libraries that contain git repositories
