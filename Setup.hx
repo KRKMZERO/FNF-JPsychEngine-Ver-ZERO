@@ -27,7 +27,7 @@ class Setup {
 					var version:String = data.version == null ? "" : data.version;
 					if (!FileSystem.exists(".haxelib/" + data.name) || (FileSystem.exists(".haxelib/" + data.name + "/.current") ? File.getContent(".haxelib/" + data.name + "/.current") != data.version : true))
 					{
-						trace('インストールされていません。インストール開始: haxelib --quiet install ${data.name} ${version}')
+						trace('インストールされていません。インストール開始: haxelib --quiet install ${data.name} ${version}');
 						Sys.command('haxelib --quiet install ${data.name} ${version}');
 					}
         
