@@ -26,7 +26,11 @@ class Setup {
 				case "install", "haxelib": // for libraries only available in the haxe package manager
 					var version:String = data.version == null ? "" : data.version;
 					if (!FileSystem.exists(".haxelib/" + data.name) || (FileSystem.exists(".haxelib/" + data.name + "/.current") ? File.getContent(".haxelib/" + data.name + "/.current") != data.version : true))
-            Sys.command('haxelib --quiet install ${data.name} ${version}');
+					{
+						trace('インストールされていません。インストール開始: haxelib --quiet install ${data.name} ${version}')
+						Sys.command('haxelib --quiet install ${data.name} ${version}');
+					}
+        
 				case "git": // for libraries that contain git repositories
 					var ref:String = data.ref == null ? "" : data.ref;
           if (!FileSystem.exists(".haxelib/" + data.name) || (FileSystem.exists(".haxelib/" + data.name + "/.current") ? File.getContent(".haxelib/" + data.name + "/.current") != "git" : true))
