@@ -45,10 +45,10 @@ jobs:
           sudo apt-get install libvlc-dev
           sudo apt-get install libvlccore-dev
           haxe --main Setup -D analyzer-optimize --interp
-          haxelib set hxCodec 2.5.1 -y
-          haxelib set lime 8.0.1 -y
-          haxelib set openfl 9.2.1 -y
-          haxelib set hxcpp 4.2.1 -y
+          haxelib set hxCodec 2.5.1 --always
+          haxelib set lime 8.0.1 --always
+          haxelib set openfl 9.2.1 --always
+          haxelib set hxcpp 4.2.1 --always
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
@@ -93,10 +93,10 @@ jobs:
       - name: Install Haxelib
         run: |
           haxe --main Setup -D analyzer-optimize --interp
-          haxelib set hxCodec 2.5.1 -y
-          haxelib set lime 8.0.1 -y
-          haxelib set openfl 9.2.1 -y
-          haxelib set hxcpp 4.2.1 -y
+          haxelib set hxCodec 2.5.1 --always
+          haxelib set lime 8.0.1 --always
+          haxelib set openfl 9.2.1 --always
+          haxelib set hxcpp 4.2.1 --always
         shell: cmd
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
@@ -142,10 +142,10 @@ jobs:
         run: |
           haxelib newrepo
           haxe --main Setup -D analyzer-optimize --interp
-          haxelib set hxCodec 2.5.1 -y
-          haxelib set lime 8.0.1 -y
-          haxelib set openfl 9.2.1 -y
-          haxelib set hxcpp 4.2.1 -y
+          haxelib set hxCodec 2.5.1 --always
+          haxelib set lime 8.0.1 --always
+          haxelib set openfl 9.2.1 --always
+          haxelib set hxcpp 4.2.1 --always
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
