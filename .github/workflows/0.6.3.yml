@@ -46,10 +46,10 @@ jobs:
           sudo apt-get install libvlc-dev
           sudo apt-get install libvlccore-dev
           haxe --main Setup -D analyzer-optimize --interp
-          haxelib set hxCodec 2.5.1 --always
-          haxelib set lime 8.0.1 --always
-          haxelib set openfl 9.2.1 --always
-          haxelib set hxcpp 4.2.1 --always
+          haxelib set hxCodec 2.5.1 --always --quiet
+          haxelib set lime 8.0.1 --always --quiet
+          haxelib set openfl 9.2.1 --always --quiet
+          haxelib set hxcpp 4.2.1 --always --quiet
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
@@ -95,10 +95,10 @@ jobs:
         run: |
           haxelib install hxcpp > /dev/null --quiet
           haxe --main Setup -D analyzer-optimize --interp
-          haxelib set hxCodec 2.5.1 --always
-          haxelib set lime 8.0.1 --always
-          haxelib set openfl 9.2.1 --always
-          haxelib set hxcpp 4.2.1 --always
+          haxelib set hxCodec 2.5.1 --always --quiet
+          haxelib set lime 8.0.1 --always --quiet
+          haxelib set openfl 9.2.1 --always --quiet
+          haxelib set hxcpp 4.2.1 --always --quiet
         shell: cmd
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
@@ -144,10 +144,10 @@ jobs:
         run: |
           haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null --quiet
-          haxelib set hxCodec 2.5.1 --always
-          haxelib set lime 8.0.1 --always
-          haxelib set openfl 9.2.1 --always
-          haxelib set hxcpp 4.2.1 --always
+          haxelib set hxCodec 2.5.1 --always --quiet
+          haxelib set lime 8.0.1 --always --quiet
+          haxelib set openfl 9.2.1 --always --quiet
+          haxelib set hxcpp 4.2.1 --always --quiet
       - name: Create Version Tag
         run: echo "${{github.run_id}}" > VERSION
       - name: Compile
