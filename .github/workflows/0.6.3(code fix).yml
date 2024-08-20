@@ -28,7 +28,7 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.2.5
+          haxe-version: 4.2.5 
       - name: Restore Cache
         uses: actions/cache@main
         with:
@@ -78,7 +78,7 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.2.5
+          haxe-version: 4.2.5 
       - name: Restore Cache
         uses: actions/cache@main
         with:
@@ -126,7 +126,7 @@ jobs:
 
       - uses: krdlab/setup-haxe@master
         with:
-          haxe-version: 4.2.5
+          haxe-version: 4.2.5 
       - name: Restore Cache
         uses: actions/cache@main
         with:
