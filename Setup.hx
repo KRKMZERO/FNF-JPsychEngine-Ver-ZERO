@@ -20,7 +20,9 @@ class Setup {
 		// brief explanation: first we parse a json containing the library names, data, and such
 		final libs:Array<Library> = Json.parse(File.getContent('./hmm.json')).dependencies;
 		var i = 0;
-		var quiet = #if windows "nul" #else "/dev/null" #end;
+		var quiet = "/dev/null";
+		if (Sys.systemName() == "Windows")
+			quiet = "nul";
 		// now we loop through the data we currently have
 		for (data in libs) {
 			// and install the libraries, based on their type
