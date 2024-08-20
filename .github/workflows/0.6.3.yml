@@ -42,7 +42,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
-          haxelib install hxcpp --always
+          haxelib install hxcpp --always --quiet
           sudo apt-get install libvlc-dev
           sudo apt-get install libvlccore-dev
           haxe --main Setup -D analyzer-optimize --interp
@@ -93,7 +93,7 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
-          haxelib install hxcpp --always
+          haxelib install hxcpp --always --quiet
           haxe --main Setup -D analyzer-optimize --interp
           haxelib set hxCodec 2.5.1 --always
           haxelib set lime 8.0.1 --always
@@ -142,8 +142,8 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
-          haxelib setup ~/haxelib
-          haxelib install hxcpp > /dev/null --quiet
+          haxelib install hxcpp --always --quiet
+          haxe --main Setup -D analyzer-optimize --interp
           haxelib set hxCodec 2.5.1 --always --quiet
           haxelib set lime 8.0.1 --always --quiet
           haxelib set openfl 9.2.1 --always --quiet
