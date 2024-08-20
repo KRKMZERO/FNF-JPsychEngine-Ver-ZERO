@@ -1,0 +1,169 @@
+# This is a basic workflow to help you get started with Actions
+
+name: (T)JPsych Engine Ver ZERO - GitHub Actions Automatic Build for 0.6.3
+
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  # push:
+    # branches: [ main, experimental ]
+  # pull_request:
+    # branches: [ main, experimental ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  buildLinux:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-22.04
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4.1.7
+
+      - uses: krdlab/setup-haxe@38fd78cc3a7960b281cf4a33a63a9c1543ac4598
+        with:
+          haxe-version: 4.2.5
+      - name: Restore Cache
+        uses: actions/cache@main
+        with:
+          key: cache-build-linux
+          path: |
+            .haxelib/
+            export/release/linux/haxe/
+            export/release/linux/obj/
+          restore-keys: |
+            cache-build-linux
+      # Runs a set of commands using the runners shell
+      - name: Install Haxelib
+        run: |
+          haxelib install hxcpp --always --quiet
+          sudo apt-get install libvlc-dev
+          sudo apt-get install libvlccore-dev
+          haxe --main Setup -D analyzer-optimize --interp
+          haxelib set hxCodec 2.5.1 --always
+          haxelib set lime 8.0.1 --always
+          haxelib set openfl 9.2.1 --always
+          haxelib set hxcpp 4.2.1 --always
+      - name: Create Version Tag
+        run: echo "${{github.run_id}}" > VERSION
+      - name: Compile
+        run: | 
+          haxelib run lime build Project.xml linux --app-version="4.0.0-${{ github.run_id}}"
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v4.3.4
+        with:
+          name: linuxBuild
+          path: 'export/release/linux/bin'
+      - name: Uploading new cache
+        uses: actions/cache@main
+        with:
+          key: cache-build-linux
+          path: |
+            .haxelib/
+            export/release/linux/haxe/
+            export/release/linux/obj/
+          restore-keys: |
+            cache-build-linux
+  buildWindows:
+    runs-on: windows-latest
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4.1.7
+
+      - uses: krdlab/setup-haxe@38fd78cc3a7960b281cf4a33a63a9c1543ac4598
+        with:
+          haxe-version: 4.2.5
+      - name: Restore Cache
+        uses: actions/cache@main
+        with:
+          key: cache-build-windows
+          path: |
+            .haxelib/
+            export/release/windows/haxe/
+            export/release/windows/obj/
+          restore-keys: |
+            cache-build-windows
+      # Runs a set of commands using the runners shell
+      - name: Install Haxelib
+        run: |
+          haxelib install hxcpp --always --quiet
+          haxe --main Setup -D analyzer-optimize --interp
+          haxelib set hxCodec 2.5.1 --always
+          haxelib set lime 8.0.1 --always
+          haxelib set openfl 9.2.1 --always
+          haxelib set hxcpp 4.2.1 --always
+        shell: cmd
+      - name: Create Version Tag
+        run: echo "${{github.run_id}}" > VERSION
+      - name: Compile
+        run: haxelib run lime build windows --app-version="4.0.0-${{ github.run_id}}"
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v4.3.4
+        with:
+          name: windowsBuild
+          path: export/release/windows/bin
+      - name: Uploading new cache
+        uses: actions/cache@main
+        with:
+          key: cache-build-windows
+          path: |
+            .haxelib/
+            export/release/windows/haxe/
+            export/release/windows/obj/
+          restore-keys: |
+            cache-build-windows
+  buildMac:
+    runs-on: macos-12
+
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v4.1.7
+
+      - uses: krdlab/setup-haxe@38fd78cc3a7960b281cf4a33a63a9c1543ac4598
+        with:
+          haxe-version: 4.2.5
+      - name: Restore Cache
+        uses: actions/cache@main
+        with:
+          key: cache-build-macos
+          path: |
+            .haxelib/
+            export/release/macos/haxe/
+            export/release/macos/obj/
+          restore-keys: |
+            cache-build-macos
+      # Runs a set of commands using the runners shell
+      - name: Install Haxelib
+        run: |
+          haxelib install hxcpp --always --quiet
+          haxe --main Setup -D analyzer-optimize --interp
+          haxelib set hxCodec 2.5.1 --always --quiet
+          haxelib set lime 8.0.1 --always --quiet
+          haxelib set openfl 9.2.1 --always --quiet
+          haxelib set hxcpp 4.2.1 --always --quiet
+      - name: Create Version Tag
+        run: echo "${{github.run_id}}" > VERSION
+      - name: Compile
+        run: haxelib run lime build mac --app-version="4.0.0-${{ github.run_id}}"
+      - name: Publish Artifact
+        uses: actions/upload-artifact@v4.3.4
+        with:
+          name: macBuild
+          path: export/release/macos/bin
+      - name: Uploading new cache
+        uses: actions/cache@main
+        with:
+          key: cache-build-macos
+          path: |
+            .haxelib/
+            export/release/macos/haxe/
+            export/release/macos/obj/
+          restore-keys: |
+            cache-build-macos
