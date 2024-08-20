@@ -3,6 +3,7 @@ package;
 import haxe.Json;
 import sys.FileSystem;
 import sys.io.File;
+import Math
 
 typedef Library = {
 	name:String, type:String,
@@ -20,7 +21,8 @@ class Setup {
 
 		// brief explanation: first we parse a json containing the library names, data, and such
 		final libs:Array<Library> = Json.parse(File.getContent('./hmm.json')).dependencies;
-
+		var i = 0;
+		var quiet = #if windows "nul" #else "/dev/null" #end;
 		// now we loop through the data we currently have
 		for (data in libs) {
 			// and install the libraries, based on their type
@@ -29,17 +31,21 @@ class Setup {
 					var version:String = data.version == null ? "" : data.version;
 					if (!FileSystem.exists(".haxelib/" + data.name) || (FileSystem.exists(".haxelib/" + data.name + "/.current") ? File.getContent(".haxelib/" + data.name + "/.current") != data.version : true))
 					{
-						trace('${data.name} ${version}がインストールされていません。インストールを開始。');
-						Sys.command('haxelib install ${data.name} ${version} --quiet');
+						var progress = Math.floor(i / libs.length);
+						trace('インストール中 (${progress}%): ${data.name}-${version}');
+						Sys.command('haxelib install ${data.name} ${version} --quiet > ' + quiet);
 					}
         
 				case "git": // for libraries that contain git repositories
 					var ref:String = data.ref == null ? "" : data.ref;
           if (!FileSystem.exists(".haxelib/" + data.name) || (FileSystem.exists(".haxelib/" + data.name + "/.current") ? File.getContent(".haxelib/" + data.name + "/.current") != "git" : true))
-					  Sys.command('haxelib --quiet git ${data.name} ${data.url} ${data.ref}');
+		  			  var progress = Math.floor(i / libs.length);
+					  trace('インストール中 (${progress}%): ${data.name}-${data.ref} ({$data.url})');
+					  Sys.command('haxelib --quiet git ${data.name} ${data.url} ${data.ref} > ' + quiet);
 				default: // and finally, throw an error if the library has no type
 					Sys.println('[PSYCH ENGINE SETUP]: Unable to resolve library of type "${data.type}" for library "${data.name}"');
 			}
+			i++;
 		}
 
 		// after the loop, we can leave
