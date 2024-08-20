@@ -25,16 +25,16 @@ class FlashingState extends MusicBeatState
 
 
 		warnText = new FlxText(0, 0, FlxG.width,
-			"点滅ライトについてのご注意\n
-			Note on Flashing Lights\n
+			"点滅ライトについてのご注意
+			Note on Flashing Lights
 			\n
-			このMODには点滅ライトが含まれてる可能性があります！\n
-			This mod may contain flashing lights!\n
+			このMODには点滅ライトが含まれてる可能性があります！
+			This mod may contain flashing lights!
 			\n
-			ENTERキーで無効にして進行します\n
-			Press ENTER key to disable and proceed\n
-			ESCAPEキーで有効のまま始めます\n
-			Start with ESCAPE key enabled\n
+			ENTERキーで無効にして進行します
+			Press ENTER key to disable and proceed
+			ESCAPEキーで有効のまま始めます
+			Start with ESCAPE key enabled
 			楽しんでね！  Enjoy!",
 			20);
 		warnText.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER);
