@@ -37,7 +37,7 @@ class FlashingState extends MusicBeatState
 			Start with ESCAPE key enabled\n
 			楽しんでね！  Enjoy!",
 			20);
-		warnText.setFormat((Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER);
+		warnText.setFormat(Paths.font("vcr.ttf"), 20, FlxColor.WHITE, CENTER);
 		warnText.screenCenter(Y);
 		add(warnText);
 	}
