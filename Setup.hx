@@ -29,18 +29,18 @@ class Setup {
 					var version:String = data.version == null ? "" : data.version;
 					if (!FileSystem.exists(".haxelib/" + data.name) || (FileSystem.exists(".haxelib/" + data.name + "/.current") ? File.getContent(".haxelib/" + data.name + "/.current") != data.version : true))
 					{
-						var progress = Math.floor(i / libs.length * 1000 / 100);
+						var progress = Math.floor(i / libs.length * 1000) / 10;
 						trace('インストール中 (${progress}%): ${data.name}-${version}');
-						Sys.command('haxelib install ${data.name} ${version} --quiet');
+						Sys.command('haxelib install ${data.name} ${version} --quiet > ' + quiet);
 					}
         
 				case "git": // for libraries that contain git repositories
 					var ref:String = data.ref == null ? "" : data.ref;
           if (!FileSystem.exists(".haxelib/" + data.name) || (FileSystem.exists(".haxelib/" + data.name + "/.current") ? File.getContent(".haxelib/" + data.name + "/.current") != "git" : true))
 	  {
-		  var progress = Math.floor(i / libs.length);
+		  var progress = Math.floor(i / libs.length * 1000) / 10;
 					  trace('インストール中 (${progress}%): ${data.name}-${data.ref} ({$data.url})');
-					  Sys.command('haxelib --quiet git ${data.name} ${data.url} ${data.ref}');
+					  Sys.command('haxelib --quiet git ${data.name} ${data.url} ${data.ref} > ' + quiet);
 	  }
 				default: // and finally, throw an error if the library has no type
 					Sys.println('[PSYCH ENGINE SETUP]: Unable to resolve library of type "${data.type}" for library "${data.name}"');
