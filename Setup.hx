@@ -31,7 +31,7 @@ class Setup {
 					var version:String = data.version == null ? "" : data.version;
 					if (!FileSystem.exists(".haxelib/" + data.name) || (FileSystem.exists(".haxelib/" + data.name + "/.current") ? File.getContent(".haxelib/" + data.name + "/.current") != data.version : true))
 					{
-						var progress = Math.floor(i / libs.length * 100);
+						var progress = Math.floor(i / libs.length * 1000 / 100);
 						trace('インストール中 (${progress}%): ${data.name}-${version}');
 						Sys.command('haxelib install ${data.name} ${version} --quiet > ' + quiet);
 					}
