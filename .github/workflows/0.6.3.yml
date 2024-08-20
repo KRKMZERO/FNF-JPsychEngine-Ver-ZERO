@@ -26,7 +26,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4.1.7
 
-      - uses: krdlab/setup-haxe@master
+      - uses: krdlab/setup-haxe@965b351a5e00e7f1f4b635f2c8d6a5d34ca98a43
         with:
           haxe-version: 4.2.5
       - name: Restore Cache
@@ -42,7 +42,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
-          haxelib setup ~/haxelib
           haxelib install hxcpp > /dev/null --quiet
           sudo apt-get install libvlc-dev
           sudo apt-get install libvlccore-dev
@@ -78,9 +77,9 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4.1.7
 
-      - uses: krdlab/setup-haxe@master
+      - uses: krdlab/setup-haxe@965b351a5e00e7f1f4b635f2c8d6a5d34ca98a43
         with:
-          haxe-version: 4.3.4
+          haxe-version: 4.2.5
       - name: Restore Cache
         uses: actions/cache@main
         with:
@@ -94,7 +93,6 @@ jobs:
       # Runs a set of commands using the runners shell
       - name: Install Haxelib
         run: |
-          haxelib setup C:/haxelib
           haxelib install hxcpp > /dev/null --quiet
           haxe --main Setup -D analyzer-optimize --interp
           haxelib set hxCodec 2.5.1 --always
@@ -128,7 +126,7 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4.1.7
 
-      - uses: krdlab/setup-haxe@master
+      - uses: krdlab/setup-haxe@965b351a5e00e7f1f4b635f2c8d6a5d34ca98a43
         with:
           haxe-version: 4.2.5
       - name: Restore Cache
