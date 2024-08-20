@@ -31,7 +31,7 @@ class Setup {
 					{
 						var progress = Math.floor(i / libs.length * 1000 / 100);
 						trace('インストール中 (${progress}%): ${data.name}-${version}');
-						Sys.command('haxelib install ${data.name} ${version} --quiet > ' + quiet);
+						Sys.command('haxelib install ${data.name} ${version} --quiet');
 					}
         
 				case "git": // for libraries that contain git repositories
@@ -40,7 +40,7 @@ class Setup {
 	  {
 		  var progress = Math.floor(i / libs.length);
 					  trace('インストール中 (${progress}%): ${data.name}-${data.ref} ({$data.url})');
-					  Sys.command('haxelib --quiet git ${data.name} ${data.url} ${data.ref} > ' + quiet);
+					  Sys.command('haxelib --quiet git ${data.name} ${data.url} ${data.ref}');
 	  }
 				default: // and finally, throw an error if the library has no type
 					Sys.println('[PSYCH ENGINE SETUP]: Unable to resolve library of type "${data.type}" for library "${data.name}"');
