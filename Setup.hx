@@ -17,8 +17,6 @@ class Setup {
 		if (!FileSystem.exists(".haxelib"))
 			FileSystem.createDirectory(".haxelib");
 
-		Sys.command('haxelib --global update haxelib');
-
 		// brief explanation: first we parse a json containing the library names, data, and such
 		final libs:Array<Library> = Json.parse(File.getContent('./hmm.json')).dependencies;
 		var i = 0;
