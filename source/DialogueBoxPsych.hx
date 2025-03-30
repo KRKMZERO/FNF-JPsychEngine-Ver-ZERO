@@ -494,6 +494,7 @@ class DialogueBoxPsych extends FlxSpriteGroup
 		trace(curDialogue.text);
 		daText.font = curDialogue.font;
 		trace(curDialogue.font);
+		daText.delay = curDialogue.speed;
 		daText.sound = curDialogue.sound;
 		if(daText.sound == null || daText.sound.trim() == '') daText.sound = 'dialogue';
 		
