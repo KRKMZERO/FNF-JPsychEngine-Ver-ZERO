@@ -2859,17 +2859,20 @@ class PlayState extends MusicBeatState
 	{
 		if(finishTimer != null) return;
 
-		vocals.pause();
+		trace('resynced vocals at ' + Math.floor(Conductor.songPosition));
+		//vocals.pause();
 
 		FlxG.sound.music.play();
 		FlxG.sound.music.pitch = playbackRate;
-		Conductor.songPosition = FlxG.sound.music.time;
+		Conductor.songPosition = FlxG.sound.music.time + Conductor.offset;
+		
 		if (Conductor.songPosition <= vocals.length)
 		{
 			vocals.time = Conductor.songPosition;
 			vocals.pitch = playbackRate;
+			vocals.play();
 		}
-		vocals.play();
+		else vocals.pause();
 	}
 
 	public var paused:Bool = false;
