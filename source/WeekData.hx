@@ -26,13 +26,11 @@ typedef WeekFile =
 	var hideStoryMode:Bool;
 	var hideFreeplay:Bool;
 	var difficulties:String;
-	var category:String; // ← 追加
 }
 
 class WeekData {
 	public static var weeksLoaded:Map<String, WeekData> = new Map<String, WeekData>();
 	public static var weeksList:Array<String> = [];
-	public static var categories:Array<String> = [];
 	public var folder:String = '';
 	
 	// JSON variables
@@ -48,7 +46,6 @@ class WeekData {
 	public var hideStoryMode:Bool;
 	public var hideFreeplay:Bool;
 	public var difficulties:String;
-	public var category:String;
 
 	public var fileName:String;
 
@@ -85,8 +82,6 @@ class WeekData {
 		hideFreeplay = weekFile.hideFreeplay;
 		difficulties = weekFile.difficulties;
 
-		category = weekFile.category != null ? weekFile.category : "default";
-
 		this.fileName = fileName;
 	}
 
@@ -94,12 +89,6 @@ class WeekData {
 	{
 		weeksList = [];
 		weeksLoaded.clear();
-		//
-		//categories = [];
-		//if (!categories.contains(weekFile.category))
-		//{
-			//categories.push(weekFile.category);
-		//}
 		#if MODS_ALLOWED
 		var disabledMods:Array<String> = [];
 		var modsListPath:String = 'modsList.txt';
@@ -158,15 +147,10 @@ class WeekData {
 						}
 						#end
 
-						if (weekFile != null
-							&& (isStoryMode == null
-								|| (isStoryMode && !weekFile.hideStoryMode)
-								|| (!isStoryMode && !weekFile.hideFreeplay)))
-						{
+						if(weekFile != null && (isStoryMode == null || (isStoryMode && !weekFile.hideStoryMode) || (!isStoryMode && !weekFile.hideFreeplay))) {
 							weeksLoaded.set(sexList[i], weekFile);
 							weeksList.push(sexList[i]);
 						}
-
 					}
 				}
 			}
@@ -262,7 +246,6 @@ class WeekData {
 	public static function loadTheFirstEnabledMod()
 	{
 		Paths.currentModDirectory = '';
-		categories = [];
 		
 		#if MODS_ALLOWED
 		if (FileSystem.exists("modsList.txt"))
